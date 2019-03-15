@@ -1,0 +1,35 @@
+<RCC>
+    <qresource prefix="/">
+        <file>amarillo.png</file>
+        <file>azul.png</file>
+        <file>base.png</file>
+        <file>bola.png</file>
+        <file>cooltext314534935849349.png</file>
+        <file>cooltext314535094768080.png</file>
+        <file>cooltext314535129579653.png</file>
+        <file>cooltext314553328998084.png</file>
+        <file>FONDO.png</file>
+        <file>fondo_juego.png</file>
+        <file>FONDOLO.png</file>
+        <file>morado.png</file>
+        <file>perdiste.png</file>
+        <file>rojo.png</file>
+        <file>Sin_titulo-1.png</file>
+        <file>verde.png</file>
+        <file>vida.png</file>
+        <file>VIDAS.png</file>
+        <file>nuevofondo.png</file>
+        <file>fonniv.png</file>
+        <file>cuatro.png</file>
+        <file>dos.png</file>
+        <file>tres.png</file>
+        <file>uno.png</file>
+        <file>cuatroB.png</file>
+        <file>dosB.png</file>
+        <file>tresB.png</file>
+        <file>unoB.png</file>
+        <file>jostick.gif</file>
+        <file>linea.png</file>
+        <file>cooltext316038527078690.png</file>
+    </qresource>
+</RCC>
