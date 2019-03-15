@@ -43,7 +43,10 @@ SOURCES += \
     ball_item.cpp \
     bloque.cpp \
     multijugador.cpp \
-    niveles.cpp
+    niveles.cpp \
+    my_scena2.cpp \
+    my_scena3.cpp \
+    my_scena4.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -64,7 +67,10 @@ HEADERS += \
     ball_item.h \
     bloque.h \
     multijugador.h \
-    niveles.h
+    niveles.h \
+    my_scena2.h \
+    my_scena3.h \
+    my_scena4.h
 
 FORMS += \
         mainwindow.ui \
