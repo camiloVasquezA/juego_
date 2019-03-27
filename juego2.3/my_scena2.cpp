@@ -62,98 +62,49 @@ void my_scena2::createObjects()
     vida1=new vidas(20,615,30,40,0,0);
     vida2=new vidas(75,615,30,40,0,0);
     vida3=new vidas(130,615,30,40,0,0);
-    int xb=100,yb=50,wb=80,hb=36;
+    int xb=100,yb=100,wb=80,hb=36;
 
-    for(int i=0;i<=21;i++){
-
-
-
-         if(i<=1){
+    for(int i=0;i<7;i++){
             bloques.append(new bloque(xb,yb,wb,hb,0,0,amarilloq,amarillo));
 
-            xb=xb+720;
-            if(i==1){
-                yb=yb+hb;
-                xb=100;
-            }
-
-
-
+            yb=yb+37;
          }
-         else if(i>1&&i<=5){
+yb=100;
+xb=xb+160;
 
-             if(i>1&&i<4){
-                    bloques.append(new bloque(xb,yb,wb,hb,0,0,moradoq,morado));
-                 xb=xb+wb;}
-             if(i==3){
-                 xb=820;
-             }
-             else if(i>3){
-                    bloques.append( new bloque(xb,yb,wb,hb,0,0,moradoq,morado));
-                 xb=xb-wb;}
-             if(i==5){
-                 xb=100;
-                 yb=yb+hb;
-             }
+for(int i=0;i<7;i++){
+        bloques.append(new bloque(xb,yb,wb,hb,0,0,amarilloq,amarillo));
 
+        yb=yb+37;
+     }
 
+yb=100;
+xb=xb+400;
+for(int i=0;i<7;i++){
+        bloques.append(new bloque(xb,yb,wb,hb,0,0,azul,azul));
 
+        yb=yb+37;
+     }
 
-         }
-         else if(i>5&&i<=11){
-             if(i>5&&i<9){
-                  bloques.append(new bloque(xb,yb,wb,hb,0,0,azul,azulq));
-                  xb=xb+wb;
+yb=100;
+xb=xb+160;
+for(int i=0;i<7;i++){
+        bloques.append(new bloque(xb,yb,wb,hb,0,0,azul,azul));
 
+        yb=yb+37;
+     }
+yb=50;
+xb=100;
 
-             }
-             if(i==8){
-                 xb=820;
-             }
-             else if(i>8){
-                 bloques.append(new bloque(xb,yb,wb,hb,0,0,azul,azulq));
-                 xb=xb-wb;
+for(int i=0;i<10;i++){
+        bloques.append(new bloque(xb,yb,wb,hb,0,0,rojo,rojo));
 
-             }
-             if(i==11){
-                 xb=100;
-                 yb=yb+hb;
-             }
-
-
-
-
-         }
-         else if(i>11){
-
-                 bloques.append(new bloque(xb,yb,wb,hb,0,0,rojo,rojo));
-                  xb=xb+wb;
-
-
-         }
-
-
-    }
-
- xb=100,yb=195;
-
-for(int i=0;i<=20;i++){
-    if(i<10)
-    {
-    bloques.append(new bloque(xb,yb,wb,hb,0,0,rojo,rojo));
-     xb=xb+wb;
-    }
-    if (i==10)
-        xb=100,yb=195+36;
-    if(i>10)
-    {
-      bloques.append(new bloque(xb,yb,wb,hb,0,0,rojo,verde));
-      xb=xb+wb;
-    }
+        xb=xb+80;
+     }
 }
 
 
-}
+
 
 void my_scena2::confingureObjects()
 {   addItem(mball);
