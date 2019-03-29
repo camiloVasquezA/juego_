@@ -64,95 +64,108 @@ void my_scena3::createObjects()
     vida3=new vidas(130,615,30,40,0,0);
     int xb=100,yb=50,wb=80,hb=36;
 
-    for(int i=0;i<=21;i++){
 
+    for (int i=1;i<=4; i++){
+           for(int j=1;j < i*2 ; j++ )
+              bloques.append(new bloque(xb,yb,wb,hb,0,0,amarilloq,amarillo));
+           xb=xb+80;
+           yb=yb+36;
 
+       }
+    xb=180;
+    yb=50;
+    for (int i=1;i<=4; i++){
+           for(int j=1;j < i*2 ; j++ )
+              bloques.append(new bloque(xb,yb,wb,hb,0,0,amarilloq,amarillo));
+           xb=xb+80;
+           yb=yb+36;
 
-         if(i<=1){
+       }
+    xb=260;
+    yb=50;
+    for (int i=1;i<=4; i++){
+           for(int j=1;j < i*2 ; j++ )
+              bloques.append(new bloque(xb,yb,wb,hb,0,0,morado,morado));
+           xb=xb+80;
+           yb=yb+36;
+
+       }
+    xb=340;
+    yb=50;
+    for (int i=1;i<=4; i++){
+           for(int j=1;j < i*2 ; j++ )
+              bloques.append(new bloque(xb,yb,wb,hb,0,0,morado,morado));
+           xb=xb+80;
+           yb=yb+36;
+
+       }
+    xb=420;
+    yb=50;
+    for (int i=1;i<=4; i++){
+           for(int j=1;j < i*2 ; j++ )
+              bloques.append(new bloque(xb,yb,wb,hb,0,0,verde,verde));
+           xb=xb+80;
+           yb=yb+36;
+
+       }
+    xb=500;
+    yb=50;
+    for (int i=1;i<=4; i++){
+           for(int j=1;j < i*2 ; j++ )
+              bloques.append(new bloque(xb,yb,wb,hb,0,0,verde,verde));
+           xb=xb+80;
+           yb=yb+36;
+
+       }
+    xb=580;
+    yb=50;
+    for (int i=1;i<=4; i++){
+           for(int j=1;j < i*2 ; j++ )
+              bloques.append(new bloque(xb,yb,wb,hb,0,0,rojo,rojo));
+           xb=xb+80;
+           yb=yb+36;
+
+       }
+    //////////////////////////////////////////////////////////////////
+    yb=270;
+    xb=100;
+    for(int i=0;i<3;i++){
             bloques.append(new bloque(xb,yb,wb,hb,0,0,amarilloq,amarillo));
 
-            xb=xb+720;
-            if(i==1){
-                yb=yb+hb;
-                xb=100;
-            }
-
-
-
+            yb=yb+37;
          }
-         else if(i>1&&i<=5){
+yb=270;
+xb=xb+180;
 
-             if(i>1&&i<4){
-                    bloques.append(new bloque(xb,yb,wb,hb,0,0,moradoq,morado));
-                 xb=xb+wb;}
-             if(i==3){
-                 xb=820;
-             }
-             else if(i>3){
-                    bloques.append( new bloque(xb,yb,wb,hb,0,0,moradoq,morado));
-                 xb=xb-wb;}
-             if(i==5){
-                 xb=100;
-                 yb=yb+hb;
-             }
+for(int i=0;i<3;i++){
+        bloques.append(new bloque(xb,yb,wb,hb,0,0,morado,morado));
 
+        yb=yb+37;
+     }
+yb=270;
+xb=xb+180;
 
+for(int i=0;i<1;i++){
+        bloques.append(new bloque(xb,yb,wb,hb,0,0,rojo,rojo));
 
+        yb=yb+37;
+     }
+yb=270;
+xb=xb+180;
 
-         }
-         else if(i>5&&i<=11){
-             if(i>5&&i<9){
-                  bloques.append(new bloque(xb,yb,wb,hb,0,0,azul,azulq));
-                  xb=xb+wb;
+for(int i=0;i<3;i++){
+        bloques.append(new bloque(xb,yb,wb,hb,0,0,morado,morado));
 
+        yb=yb+37;
+     }
+yb=270;
+xb=xb+180;
 
-             }
-             if(i==8){
-                 xb=820;
-             }
-             else if(i>8){
-                 bloques.append(new bloque(xb,yb,wb,hb,0,0,azul,azulq));
-                 xb=xb-wb;
+for(int i=0;i<3;i++){
+        bloques.append(new bloque(xb,yb,wb,hb,0,0,amarillo,amarillo));
 
-             }
-             if(i==11){
-                 xb=100;
-                 yb=yb+hb;
-             }
-
-
-
-
-         }
-         else if(i>11){
-
-                 bloques.append(new bloque(xb,yb,wb,hb,0,0,rojo,rojo));
-                  xb=xb+wb;
-
-
-         }
-
-
-    }
-
- xb=100,yb=195;
-
-for(int i=0;i<=20;i++){
-    if(i<10)
-    {
-    bloques.append(new bloque(xb,yb,wb,hb,0,0,rojo,rojo));
-     xb=xb+wb;
-    }
-    if (i==10)
-        xb=100,yb=195+36;
-    if(i>10)
-    {
-      bloques.append(new bloque(xb,yb,wb,hb,0,0,rojo,verde));
-      xb=xb+wb;
-    }
-}
-
-
+        yb=yb+37;
+     }
 }
 
 void my_scena3::confingureObjects()
