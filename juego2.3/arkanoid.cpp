@@ -39,7 +39,22 @@ Arkanoid::Arkanoid(int niv,QGraphicsView *graphicsV, QObject *parent)
 
 void Arkanoid::starGame()
 {
+    if (nivel==1){
    mScene->startScene( );
+    }
+
+    if (nivel==2){
+   mScene2->startScene( );
+    }
+
+    if (nivel==3){
+   mScene3->startScene( );
+    }
+
+    if (nivel==4){
+   mScene4->startScene( );
+    }
+
 }
 
 void Arkanoid::stopGame()
