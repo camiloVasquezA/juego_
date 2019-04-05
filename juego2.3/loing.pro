@@ -6,6 +6,9 @@
 QT       += core gui widgets serialport
 QT       += core gui widgets sql
 QT       += core gui serialport
+QT       += core gui \
+          multimedia
+
 
 TARGET = loing
 TEMPLATE = app
@@ -91,5 +94,6 @@ RESOURCES += \
 DISTFILES += \
     C:/Users/Camilo/Desktop/INSTRUMENTO PARA RECOLECTAR INFORMACIÓN.doc \
     C:/Users/Camilo/Desktop/COMUNICADO OFICIAL COMCUERDAS.pdf \
-    C:/Program Files (x86)/Dev-Cpp/devcpp.exe
+    C:/Program Files (x86)/Dev-Cpp/devcpp.exe \
+    Rebote pelota 2D-[AudioTrimmer.com].mp3
 

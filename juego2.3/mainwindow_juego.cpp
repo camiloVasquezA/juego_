@@ -5,7 +5,6 @@
 #include <QtSerialPort/QSerialPortInfo>
 #include<string.h>
 
-
 #include <QDebug>
 using namespace std;
 void MainWindow_juego::verificar()
@@ -34,7 +33,7 @@ MainWindow_juego::MainWindow_juego(int niv,QString puerto,QWidget *parent) :
     connect(timer_control,SIGNAL(timeout()),this,SLOT(Joy()));
 
 
-    control->setPortName("COM6");
+    control->setPortName("COM8");
     //timer_control->start(100);
     if(control->open(QIODevice::ReadWrite)){
         //Ahora el puerto seria está abierto

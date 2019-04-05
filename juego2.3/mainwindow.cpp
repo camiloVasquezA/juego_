@@ -19,10 +19,6 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->setupUi(this);
     ui->contralineEdit_2->setEchoMode(QLineEdit::Password);
 
-
-
-
-
 }
 
 MainWindow::~MainWindow()

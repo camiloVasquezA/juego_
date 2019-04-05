@@ -27,6 +27,10 @@ private slots:
 
     void on_nivel4_clicked();
 
+    void on_pushButton_5_clicked();
+
+    void on_lineEdit_textEdited(const QString &arg1);
+
 private:
     Ui::niveles *ui;
 

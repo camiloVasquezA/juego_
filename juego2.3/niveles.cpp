@@ -9,7 +9,7 @@ niveles::niveles(QWidget *parent) :
     ui(new Ui::niveles)
 {
     ui->setupUi(this);
- puerto=ui->lineEdit->text();
+ //puerto=ui->lineEdit->text();
 
 
  QSize size(151,91);
@@ -64,4 +64,12 @@ void niveles::on_nivel4_clicked()
 
 
 }
+
+
+void niveles::on_pushButton_5_clicked()
+{
+    puerto=ui->lineEdit->text();
+}
+
+
 

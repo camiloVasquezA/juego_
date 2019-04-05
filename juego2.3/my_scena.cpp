@@ -10,6 +10,7 @@
 #include <QString>
 #include <QPixmap>
 #include "vidas.h"
+#include<QMediaPlayer>
 #define MILISECONDS 10
 
 
@@ -150,9 +151,15 @@ for(int i=0;i<=20;i++){
       bloques.append(new bloque(xb,yb,wb,hb,0,0,rojo,verde));
       xb=xb+wb;
     }
+
 }
 
-
+yb=yb+hb+1;
+xb=100;
+for(int i=0;i<10;i++){
+    bloques.append(new bloque(xb,yb,wb,hb,0,0,azul,azul));
+    xb=xb+wb;
+}
 }
 
 void my_scena::confingureObjects()
@@ -261,6 +268,8 @@ void my_scena::updateScene()
 
 void my_scena::checkoCollisions()
 {
+    QMediaPlayer *rebote=new QMediaPlayer();
+    rebote->setMedia(QUrl("qrc:/Rebote pelota 2D-[AudioTrimmer.com].mp3"));
     int bvx=mball->getvx();
     int bvy=mball->getvy();
    const int pvx=mplataform->getvx();
@@ -269,22 +278,26 @@ void my_scena::checkoCollisions()
     if(bvx>0&&bvy>0&&pvx>0&&pvy==0){
        bvx=D_Util::abs(bvx);
        bvy=-D_Util::abs(bvy);
+       rebote->play();
     }
 
     else if(bvx<0&&bvy>0&&pvx>0&&pvy==0){
         bvx=-D_Util::abs(bvx);
         bvy=-D_Util::abs(bvy);
+        rebote->play();
 
     }
     else if (bvx>0&&bvy>0&&pvx<0&&pvy==0) {
         bvx=D_Util::abs(bvx);
         bvy=-D_Util::abs(bvy)-0.5;
+        rebote->play();
 
     }
     else if(bvx<0&&bvy>0&&pvx<0&&pvy==0){
 
        bvx=-D_Util::abs(bvx);
        bvy=-D_Util::abs(bvy)-0.5;
+       rebote->play();
     }
 
     mball->setvx(bvx);
