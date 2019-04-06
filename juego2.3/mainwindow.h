@@ -31,6 +31,8 @@ private slots:
 
     void on_RegistrarUsuariopushButton_clicked();
 
+    void on_pushButton_clicked(bool checked);
+
 private:
     Ui::MainWindow *ui;
 

@@ -17,7 +17,7 @@
    <widget class="QDialogButtonBox" name="buttonBox">
     <property name="geometry">
      <rect>
-      <x>480</x>
+      <x>470</x>
       <y>510</y>
       <width>131</width>
       <height>41</height>
@@ -141,7 +141,7 @@
      <x>0</x>
      <y>0</y>
      <width>1079</width>
-     <height>21</height>
+     <height>20</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuArchivo">

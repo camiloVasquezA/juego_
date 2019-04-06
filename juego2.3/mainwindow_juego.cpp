@@ -11,8 +11,23 @@ void MainWindow_juego::verificar()
 {
     if(mArkanoid->getscena()->getvidas()==0){
         QMessageBox::information(this,"Arkanoid","Fin del juego");
-        mArkanoid->getscena()->setvidas(3);}
+        mArkanoid->getscena()->setvidas(3);
+    }
 
+    if(mArkanoid->getscena2()->getvidas()==0){
+        QMessageBox::information(this,"Arkanoid","Fin del juego");
+        mArkanoid->getscena2()->setvidas(3);
+    }
+
+    if(mArkanoid->getscena3()->getvidas()==0){
+        QMessageBox::information(this,"Arkanoid","Fin del juego");
+        mArkanoid->getscena3()->setvidas(3);
+    }
+
+    if(mArkanoid->getscena4()->getvidas()==0){
+        QMessageBox::information(this,"Arkanoid","Fin del juego");
+        mArkanoid->getscena4()->setvidas(3);
+    }
 }
 
 MainWindow_juego::MainWindow_juego(int niv,QString puerto,QWidget *parent) :
@@ -33,7 +48,7 @@ MainWindow_juego::MainWindow_juego(int niv,QString puerto,QWidget *parent) :
     connect(timer_control,SIGNAL(timeout()),this,SLOT(Joy()));
 
 
-    control->setPortName("COM8");
+    control->setPortName(puerto);
     //timer_control->start(100);
     if(control->open(QIODevice::ReadWrite)){
         //Ahora el puerto seria está abierto
@@ -92,27 +107,43 @@ void MainWindow_juego::Joy(){
 
                 case '0':
                    mArkanoid->getscena()->getplataform()->setx(mArkanoid->getscena()->getplataform()->getx()-(mArkanoid->getscena()->getplataform()->getvx())*2.0);
+                   mArkanoid->getscena2()->getplataform()->setx(mArkanoid->getscena2()->getplataform()->getx()-(mArkanoid->getscena()->getplataform()->getvx())*2.0);
+                   mArkanoid->getscena3()->getplataform()->setx(mArkanoid->getscena3()->getplataform()->getx()-(mArkanoid->getscena()->getplataform()->getvx())*2.0);
+                   mArkanoid->getscena4()->getplataform()->setx(mArkanoid->getscena4()->getplataform()->getx()-(mArkanoid->getscena()->getplataform()->getvx())*2.0);
 
                     break;
                 case '1':
                    mArkanoid->getscena()->getplataform()->setx(mArkanoid->getscena()->getplataform()->getx()-(mArkanoid->getscena()->getplataform()->getvx())*1.3);
+                   mArkanoid->getscena2()->getplataform()->setx(mArkanoid->getscena2()->getplataform()->getx()-(mArkanoid->getscena()->getplataform()->getvx())*1.3);
+                   mArkanoid->getscena3()->getplataform()->setx(mArkanoid->getscena3()->getplataform()->getx()-(mArkanoid->getscena()->getplataform()->getvx())*1.3);
+                   mArkanoid->getscena4()->getplataform()->setx(mArkanoid->getscena4()->getplataform()->getx()-(mArkanoid->getscena()->getplataform()->getvx())*1.3);
 
                     break;
                 case '2':
                    mArkanoid->getscena()->getplataform()->setx(mArkanoid->getscena()->getplataform()->getx()-(mArkanoid->getscena()->getplataform()->getvx()));
-
+                   mArkanoid->getscena2()->getplataform()->setx(mArkanoid->getscena2()->getplataform()->getx()-(mArkanoid->getscena()->getplataform()->getvx()));
+                   mArkanoid->getscena3()->getplataform()->setx(mArkanoid->getscena3()->getplataform()->getx()-(mArkanoid->getscena()->getplataform()->getvx()));
+                   mArkanoid->getscena4()->getplataform()->setx(mArkanoid->getscena4()->getplataform()->getx()-(mArkanoid->getscena()->getplataform()->getvx()));
                     break;
                 case '3':
                    mArkanoid->getscena()->getplataform()->setx(mArkanoid->getscena()->getplataform()->getx()+(mArkanoid->getscena()->getplataform()->getvx()));
-
+                   mArkanoid->getscena2()->getplataform()->setx(mArkanoid->getscena2()->getplataform()->getx()+(mArkanoid->getscena()->getplataform()->getvx()));
+                   mArkanoid->getscena3()->getplataform()->setx(mArkanoid->getscena3()->getplataform()->getx()+(mArkanoid->getscena()->getplataform()->getvx()));
+                   mArkanoid->getscena4()->getplataform()->setx(mArkanoid->getscena4()->getplataform()->getx()+(mArkanoid->getscena()->getplataform()->getvx()));
                     break;
                 case '4':
                   mArkanoid->getscena()->getplataform()->setx(mArkanoid->getscena()->getplataform()->getx()+(mArkanoid->getscena()->getplataform()->getvx())*1.3);
+                  mArkanoid->getscena2()->getplataform()->setx(mArkanoid->getscena2()->getplataform()->getx()+(mArkanoid->getscena()->getplataform()->getvx())*1.3);
+                  mArkanoid->getscena3()->getplataform()->setx(mArkanoid->getscena3()->getplataform()->getx()+(mArkanoid->getscena()->getplataform()->getvx())*1.3);
+                  mArkanoid->getscena4()->getplataform()->setx(mArkanoid->getscena4()->getplataform()->getx()+(mArkanoid->getscena()->getplataform()->getvx())*1.3);
 
                     break;
                 case 'X':
                     mArkanoid->getscena()->getplataform()->setx(mArkanoid->getscena()->getplataform()->getx()+(mArkanoid->getscena()->getplataform()->getvx())*2.0);
-
+                    mArkanoid->getscena2()->getplataform()->setx(mArkanoid->getscena2()->getplataform()->getx()+(mArkanoid->getscena()->getplataform()->getvx())*2.0);
+                    mArkanoid->getscena3()->getplataform()->setx(mArkanoid->getscena3()->getplataform()->getx()+(mArkanoid->getscena()->getplataform()->getvx())*2.0);
+                    mArkanoid->getscena4()->getplataform()->setx(mArkanoid->getscena4()->getplataform()->getx()+(mArkanoid->getscena()->getplataform()->getvx())*2.0);
+                    break;
                     break;
 
                 case 'N':

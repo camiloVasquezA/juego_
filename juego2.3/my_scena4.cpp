@@ -10,6 +10,7 @@
 #include <QString>
 #include <QPixmap>
 #include "vidas.h"
+#include<QMediaPlayer>
 #define MILISECONDS 10
 
 
@@ -72,7 +73,7 @@ for (int i=0 ;i<11;i++){
 
 yb=yb+37;
 xb=68;
-for (int i=0 ;i<10;i++){
+for (int i=0 ;i<6;i++){
             bloques.append(new bloque(xb,yb,wb,hb,0,0,amarilloq,amarillo));
             xb=xb+80;
             xb=xb+80;
@@ -80,7 +81,7 @@ for (int i=0 ;i<10;i++){
 
 yb=yb+37;
 xb=68;
-for (int i=0 ;i<10;i++){
+for (int i=0 ;i<6;i++){
             bloques.append(new bloque(xb,yb,wb,hb,0,0,azul,azul));
             xb=xb+80;
             xb=xb+80;
@@ -181,19 +182,8 @@ void my_scena4::updateScene()
             removeItem(bloques.at(i)->getlin2());
             bloques.removeAt(i);
 
-
-
-
-
-
-
-
        }
-
-
-
-        }
-
+}
 
  update();
 
@@ -201,6 +191,9 @@ void my_scena4::updateScene()
 
 void my_scena4::checkoCollisions()
 {
+
+    QMediaPlayer *rebote=new QMediaPlayer();
+    rebote->setMedia(QUrl("qrc:/Rebote pelota 2D-[AudioTrimmer.com].mp3"));
     int bvx=mball->getvx();
     int bvy=mball->getvy();
    const int pvx=mplataform->getvx();
@@ -209,22 +202,30 @@ void my_scena4::checkoCollisions()
     if(bvx>0&&bvy>0&&pvx>0&&pvy==0){
        bvx=D_Util::abs(bvx);
        bvy=-D_Util::abs(bvy);
+       rebote->setVolume(40);
+       rebote->play();
     }
 
     else if(bvx<0&&bvy>0&&pvx>0&&pvy==0){
         bvx=-D_Util::abs(bvx);
         bvy=-D_Util::abs(bvy);
+        rebote->setVolume(40);
+        rebote->play();
 
     }
     else if (bvx>0&&bvy>0&&pvx<0&&pvy==0) {
         bvx=D_Util::abs(bvx);
         bvy=-D_Util::abs(bvy)-0.5;
+        rebote->setVolume(28);
+        rebote->play();
 
     }
     else if(bvx<0&&bvy>0&&pvx<0&&pvy==0){
 
        bvx=-D_Util::abs(bvx);
        bvy=-D_Util::abs(bvy)-0.5;
+       rebote->setVolume(28);
+       rebote->play();
     }
 
     mball->setvx(bvx);
@@ -233,22 +234,31 @@ void my_scena4::checkoCollisions()
 
 void my_scena4::collisionsWhitbloque()
 {
+    QMediaPlayer *sonidoBloque=new QMediaPlayer();
+    sonidoBloque->setMedia(QUrl("qrc:/GOLPE DE BATE BASEBALL.mp3"));
+    sonidoBloque->setVolume(20);
     int bvx=mball->getvx();
     int bvy=mball->getvy();
 
     if(bvx>0&&bvy>0){
        bvx=D_Util::abs(bvx);
        bvy=-D_Util::abs(bvy);
+       sonidoBloque->setVolume(20);
+       sonidoBloque->play();
     }
 
     else if(bvx<0&&bvy>0){
         bvx=-D_Util::abs(bvx);
         bvy=-D_Util::abs(bvy);
+        sonidoBloque->setVolume(20);
+        sonidoBloque->play();
 
     }
     else if (bvx>0&&bvy<0) {
         bvx=D_Util::abs(bvx);
         bvy=D_Util::abs(bvy);
+        sonidoBloque->setVolume(20);
+        sonidoBloque->play();
 
 
     }
@@ -256,23 +266,31 @@ void my_scena4::collisionsWhitbloque()
 
        bvx=-D_Util::abs(bvx);
        bvy=D_Util::abs(bvy);
+       sonidoBloque->setVolume(20);
+       sonidoBloque->play();
     }
   mball->setvx(bvx);
   mball->setvy(bvy);
     }
 
 void my_scena4::collinsWhitLine1(){
-
+    QMediaPlayer *sonidoBloque=new QMediaPlayer();
+    sonidoBloque->setMedia(QUrl("qrc:/GOLPE DE BATE BASEBALL.mp3"));
  int bvx=mball->getvx();
  int bvy=mball->getvy();
  if(bvx<0 && bvy<0){
      bvx=D_Util::abs(bvx);
      bvy=-D_Util::abs(bvy);
+     sonidoBloque->setVolume(20);
+     sonidoBloque->play();
 
  }
  else if(bvx<0 && bvy>0){
      bvx=D_Util::abs(bvx);
      bvy=D_Util::abs(bvy);
+     sonidoBloque->setVolume(20);
+     sonidoBloque->play();
+
  }
 
  mball->setvx(bvx);
@@ -283,17 +301,24 @@ void my_scena4::collinsWhitLine1(){
 
 void my_scena4::collinsWhitLine2()
 {
-
+    QMediaPlayer *sonidoBloque=new QMediaPlayer();
+    sonidoBloque->setMedia(QUrl("qrc:/GOLPE DE BATE BASEBALL.mp3"));
     int bvx=mball->getvx();
     int bvy=mball->getvy();
     if(bvx>0 && bvy<0){
         bvx=-D_Util::abs(bvx);
         bvy=-D_Util::abs(bvy);
+        sonidoBloque->setVolume(20);
+        sonidoBloque->play();
+
 
     }
     else if(bvx>0 && bvy>0){
         bvx=-D_Util::abs(bvx);
         bvy=D_Util::abs(bvy);
+        sonidoBloque->setVolume(20);
+        sonidoBloque->play();
+
     }
 
     mball->setvx(bvx);

@@ -6,7 +6,7 @@
 #include <QMessageBox>
 #include "mainwindow_juego.h"
 #include "niveles.h"
-
+#include<QMediaPlayer>
 
 
 
@@ -88,4 +88,5 @@ void MainWindow::on_RegistrarUsuariopushButton_clicked()
 
 
 }
+
 

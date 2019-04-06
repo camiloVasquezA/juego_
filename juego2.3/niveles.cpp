@@ -69,6 +69,7 @@ void niveles::on_nivel4_clicked()
 void niveles::on_pushButton_5_clicked()
 {
     puerto=ui->lineEdit->text();
+    ui->lineEdit->clear();
 }
 
 
